@@ -1412,7 +1412,7 @@ ul {
 }
 
 @media screen and ($bp-min: $bp-med) {
-  .desk--floatLeft {
+  .desk-floatLeft {
     float: left;
     height: 100%;
   }
@@ -2098,13 +2098,13 @@ ul {
 
 @media screen and ($bp-min: $bp-med) {
   .desk--table__contain {
-    display: table;
+    display: block;
     height: 100%;
     width: 100%;
   }
 
   .desk--table__inner {
-    display: table-cell;
+    display: inline-block;
     height: 100%;
     vertical-align: middle;
   }
@@ -2337,7 +2337,6 @@ a.toggle__shoppingbag {
   img {
     display: block;
     margin: 0 auto;
-    max-height: 50px;
     max-width: 150px;
   }
 }
@@ -2350,10 +2349,13 @@ a.toggle__shoppingbag {
 
     a {
       font-size: 13px;
+      height: 100%;
+      display: inline-block;
     }
 
     img {
-      max-height: $ts-topbarheight - 24px;
+      height: inherit;
+      display: block;
     }
   }
 }
